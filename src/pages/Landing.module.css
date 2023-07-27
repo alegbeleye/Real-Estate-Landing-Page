@@ -1,0 +1,288 @@
+*{
+    overflow-x: hidden;
+}
+
+.background{
+    background-color: black;
+}
+
+.back{
+    object-fit: cover;
+    background-color: black;
+    width: 100%;
+    z-index: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.backgroundImage{
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    left:0;
+    top:0;
+    animation: fadeInAnimation 2s linear;  
+    height: 100%;
+    background-position: center;
+    object-fit: cover;
+    opacity: 70%;
+    transition: opacity 2s ease-out;
+}
+
+.pageContainer{
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10vh;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Geologica', sans-serif; 
+}
+
+.backgroundContainer{
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10vh;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Geologica', sans-serif;
+    animation: fadeInAnimation 2s linear;
+}
+
+
+.pageContainer *{
+    background: none;
+}
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+    color: white;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 200;
+    flex-wrap: wrap;
+}
+
+.comp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 70%;
+}
+
+.navLoader{
+    background-color: white;
+    width: 0%;
+    height: 3px;
+    transition: all .5s ease-in-out;
+}
+
+.navComponent{
+    cursor: pointer;
+}
+
+.navComponent:hover .navLoader{
+    width: 100%;
+}
+
+.navBarSection{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    column-gap: 3vw;
+    font-size: 1em;
+    flex-basis: content;
+}
+.navBarSection *{
+    margin: 0;
+}
+
+.searchIcon{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.middleSection{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 6vw;
+    margin: 0;
+    font-weight: 900;
+    margin-left: 5vw;
+    color: white;
+    max-width: 450px;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 700;
+    line-height: 90px;
+}
+
+.logo{
+    font-family: 'Geologica', sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.slideCount{
+    font-size: 3vh;
+    color: white;
+    font-weight: 400;
+}
+
+.slideTotal{
+    color: white;
+    font-size: 1.5vh;
+    font-weight: 200;
+    padding: 0;
+    margin-top: 25px;
+    margin-left: 3px;
+}
+
+.slideRef{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-left: 3vw;
+}
+
+.footerSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer1{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: center;
+    padding-left: 5vw;
+    color: white;
+}
+
+.footer1Head{
+    font-size: 3vh;
+    margin: 0;
+    font-weight: 400;
+}
+
+.footer1Body{
+    font-size: 1.99vh;
+    font-weight: 100;
+}
+
+.footer2{
+    color: white;
+    align-self: flex-end;
+    height: 190px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5vw;
+    flex-basis:51%;
+    flex-shrink: 1;
+    margin: 0;
+}
+
+.footer2Header{
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.footer2SubHead{
+    font-size: 2vh;
+    font-weight: 300;
+}
+
+.footer2Body{
+    font-size: 1.5vh;
+    font-weight: 200;
+}
+
+.footer2SubSec{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 20px;
+    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding: 0;
+    flex-basis: 150px;
+}
+
+.footer2SubSec *{
+    overflow: hidden;
+}
+
+.footer2SubSec *{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.divider{
+    margin: 0;
+    margin-top: 10vh;
+    height: 50px;
+    border-left: .5px solid white;
+    padding: 0;
+}
+
+@keyframes navload {
+    from {
+        width:0%;
+    }
+
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes fadeInAnimation{
+    from{
+        opacity: 0%;
+    }
+
+    to{
+        opacity: 70%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .footer2{
+        flex-basis:100%;
+    }
+
+    .divider{
+        display: none;
+    }
+  }
